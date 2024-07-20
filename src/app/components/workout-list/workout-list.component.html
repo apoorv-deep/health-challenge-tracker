@@ -1,0 +1,71 @@
+<div class="max-w-4xl mx-auto p-6 min-h-[86vh]">
+    <h5 class="text-2xl font-medium text-gray-800 text-center">Workout Log List</h5>
+
+    <div class="flex flex-col md:flex-row md:justify-between mb-6">
+      <input type="text" [(ngModel)]="searchTerm" (input)="applyFilters()" placeholder="Search by name"
+        class="mb-2 md:mb-0 px-4 py-2 bg-white border border-gray-300 rounded-md h-10 md:w-2/5 w-full focus:outline-none focus:ring-2 focus:ring-blue-500" />
+
+      <select [(ngModel)]="filterType" (change)="applyFilters()"
+        class="mb-2 md:mb-0 px-4 py-2 bg-white border border-gray-300 rounded-md h-10 md:w-2/5 w-full cursor-pointer">
+        <option value="">Filter by workout type</option>
+        <option value="All">All</option>
+        <option value="Running">Running</option>
+        <option value="Cycling">Cycling</option>
+        <option value="Swimming">Swimming</option>
+        <option value="Yoga">Yoga</option>
+        <option value="Meditation">Meditation</option>
+      </select>
+    </div>
+
+    <div class="overflow-x-auto shadow-md rounded-md">
+      <table class="min-w-full bg-white table-auto text-left border-collapse">
+        <thead class="bg-gray-200">
+          <tr>
+            <th class="p-4 border-b">Name</th>
+            <th class="p-4 border-b">Workouts</th>
+            <th class="p-4 border-b">Number of Workouts</th>
+            <th class="p-4 border-b">Total Workout Minutes</th>
+            <th class="p-4 border-b">View Progress</th>
+          </tr>
+        </thead>
+        <tbody class="text-sm">
+          <tr *ngFor="let user of paginatedUsers" class="hover:bg-gray-100">
+            <td class="border-b px-4 py-2">{{ user.name }}</td>
+            <td class="border-b px-4 py-2">{{ getWorkoutTypes(user) }}</td>
+            <td class="border-b px-4 py-2  text-center">{{ user.workouts.length }}</td>
+            <td class="border-b px-4 py-2  text-center">{{ getTotalWorkoutMinutes(user) }}</td>
+            <td class="border-b px-4 py-2 text-center">
+              <button (click)="viewProgress(user.name)" class="text-blue-500 hover:underline">View Progress</button>
+            </td>
+          </tr>
+          <tr *ngIf="paginatedUsers.length === 0">
+            <td colspan="4" class="text-center p-4">No workouts found.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mt-8 flex flex-col md:flex-row md:justify-between items-center">
+      <div class="mt-4 md:mt-0">
+        <label for="itemsPerPage" class="block text-sm font-medium text-gray-700">Items per page:</label>
+        <select id="itemsPerPage" [(ngModel)]="itemsPerPage" (change)="updateItemsPerPage()"
+          class="px-4 py-2 border rounded-md cursor-pointer">
+          <option *ngFor="let option of itemsPerPageOptions" [value]="option">{{ option }}</option>
+        </select>
+      </div>
+      <div class="flex justify-center items-center space-x-4" *ngIf="showPagination">
+        <button (click)="goToPage(currentPage - 1)" [disabled]="currentPage === 1"
+          class="px-4 py-2 bg-blue-500 hover:bg-blue-700 text-white rounded disabled:opacity-50">
+          Previous
+        </button>
+        <span *ngFor="let page of pagesArray" class="px-3 py-2 border rounded"
+          [ngClass]="{ 'bg-blue-500 text-white': currentPage === page }">
+          <a (click)="goToPage(page)" class="cursor-pointer">{{ page }}</a>
+        </span>
+        <button (click)="goToPage(currentPage + 1)" [disabled]="currentPage === pagesArray.length"
+          class="px-4 py-2 bg-blue-500 hover:bg-blue-700 text-white rounded disabled:opacity-50">
+          Next
+        </button>
+      </div>
+    </div>
+  </div>
