@@ -9,7 +9,6 @@ A single-page Angular (v14+) application for tracking and visualizing your fitne
 - [Running the Application Locally](#running-the-application-locally)
 - [Code Coverage Report](#code-coverage-report)
 - [Technologies Used](#technologies-used)
-- [Running Tests](#running-tests)
 - [Folder Structure](#folder-structure)
 
 ## Solution Overview
