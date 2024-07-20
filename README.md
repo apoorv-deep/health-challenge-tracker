@@ -1,4 +1,5 @@
 # Health Challenge Tracker
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1bd225b7-56d3-410e-afdd-c73108f9c5d3/deploy-status)](https://app.netlify.com/sites/fyle-health-challenge-tracker/deploys)
 
 A single-page Angular (v14+) application for tracking and visualizing your fitness challenges.
 
