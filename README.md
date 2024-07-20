@@ -1,7 +1,5 @@
 # Health Challenge Tracker
-[Code Coverage Badge](https://img.shields.io/badge/Code%20Coverage-100%25-brightgreen)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.1.
 A single-page Angular (v14+) application for tracking and visualizing your fitness challenges.
 
 ## Table of Contents
