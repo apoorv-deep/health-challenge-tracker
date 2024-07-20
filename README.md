@@ -9,11 +9,8 @@ A single-page Angular (v14+) application for tracking and visualizing your fitne
 - [Running the Application Locally](#running-the-application-locally)
 - [Code Coverage Report](#code-coverage-report)
 - [Technologies Used](#technologies-used)
-- [Prerequisites](#prerequisites)
-- [Getting Started](#getting-started)
 - [Running Tests](#running-tests)
 - [Folder Structure](#folder-structure)
-- [Contributing](#contributing)
 
 ## Solution Overview
 
@@ -69,3 +66,27 @@ This project aims for 100% code coverage to ensure code quality and reliability.
 
 ```bash
 ng test --code-coverage
+```
+
+After running this command you will find a folder names coverage in the project directory, you can find the coverage report there.
+
+## Technologies Used
+
+- **Angular (v14+):**  The core framework for building the application.
+- **Angular Material:**  A UI component library for creating a polished and consistent user interface.
+- **Tailwind CSS:** A utility-first CSS framework for rapid UI development and customization.
+- **ngx-charts:** A charting library for Angular to create interactive data visualizations.
+- **Jasmine & Karma:**  Testing frameworks used for unit testing the Angular components and services.
+- **Local Storage:** The browser's local storage mechanism is used for persistent data storage.
+
+## Folder Structure
+
+    src/app
+    ├── app.component.* (Root component)
+    ├── components/
+    │   ├── workout-tracker/ (Workout input form)
+    │   ├── workout-list/ (Workout list display)
+    │   └── workout-chart/ (Workout chart visualization)
+    └── services/
+        └── workout-data.service.ts (Manages workout data)
+
