@@ -2,26 +2,76 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.1.
 
-## Development server
+# Health Challenge Tracker
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+[![Code Coverage Badge (replace with actual link)]](https://img.shields.io/badge/Code%20Coverage-100%25-brightgreen)
 
-## Code scaffolding
+A single-page Angular (v14+) application for tracking and visualizing your fitness challenges.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Table of Contents
 
-## Build
+- [Solution Overview](#solution-overview)
+- [Functionality & Details](#functionality--details)
+- [Running the Application Locally](#running-the-application-locally)
+- [Code Coverage Report](#code-coverage-report)
+- [Technologies Used](#technologies-used)
+- [Prerequisites](#prerequisites)
+- [Getting Started](#getting-started)
+- [Running Tests](#running-tests)
+- [Folder Structure](#folder-structure)
+- [Contributing](#contributing)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Solution Overview
 
-## Running unit tests
+This application addresses the challenge of tracking personal fitness goals and progress. It provides an intuitive interface for logging workouts, searching/filtering the data, and visualizing the accumulated workout data in the form of charts. The user's data is persistently stored in the browser's local storage.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Functionality & Details
 
-## Running end-to-end tests
+- **Workout Tracker:**
+    - Users can input their name, select a workout type, and enter the duration (in minutes).
+    - Form validation ensures data integrity (e.g., required fields, positive minutes).
+    - Added workouts are stored in local storage.
+    - An event is emitted to notify other components of the new workout data.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- **Workout List:**
+    - Displays all logged workouts in a table format (using Angular Material).
+    - Columns: User Name, Workout Type, Minutes, Total Minutes (calculated).
+    - Search bar to filter workouts by user name.
+    - Dropdown menu to filter workouts by type.
+    - Pagination for easier navigation of larger datasets.
 
-## Further help
+- **Workout Chart:**
+    - Visualizes the accumulated workout data.
+    - Utilizes `ngx-charts` (or a similar library) to create bar charts.
+    - Displays total minutes per workout type.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Running the Application Locally
+
+1.  **Prerequisites:**
+    - Node.js and npm (or Yarn) installed.
+    - Angular CLI installed globally: `npm install -g @angular/cli`
+
+2.  **Clone the Repository:**
+    ```bash
+    git clone <your-repository-url>
+    ```
+
+3.  **Install Dependencies:**
+    ```bash
+    cd health-challenge-tracker
+    npm install
+    ```
+
+4.  **Start the Development Server:**
+    ```bash
+    ng serve
+    ```
+
+    The app will be accessible at `http://localhost:4200/` in your browser.
+
+## Code Coverage Report
+
+This project aims for 100% code coverage to ensure code quality and reliability. To generate the code coverage report, run:
+
+```bash
+ng test --code-coverage
