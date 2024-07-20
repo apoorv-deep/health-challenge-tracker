@@ -1,4 +1,4 @@
-# Health Challenge Tracker
+# [Health Challenge Tracker](https://main--fyle-health-challenge-tracker.netlify.app/workout-tracker)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/1bd225b7-56d3-410e-afdd-c73108f9c5d3/deploy-status)](https://app.netlify.com/sites/fyle-health-challenge-tracker/deploys)
 
 A single-page Angular (v14+) application for tracking and visualizing your fitness challenges.
@@ -11,6 +11,8 @@ A single-page Angular (v14+) application for tracking and visualizing your fitne
 - [Code Coverage Report](#code-coverage-report)
 - [Technologies Used](#technologies-used)
 - [Folder Structure](#folder-structure)
+- [Live Demo & Deployment](#live-demo--deployment)
+- [Deployment Instructions](#deployment-instructions)
 
 ## Solution Overview
 
@@ -89,4 +91,23 @@ After running this command you will find a folder names coverage in the project 
     │   └── workout-chart/ (Workout chart visualization)
     └── services/
         └── workout-data.service.ts (Manages workout data)
+## Live Demo & Deployment
+
+You can experience the Health Challenge Tracker in action:
+
+- **Live Demo:** [https://main--fyle-health-challenge-tracker.netlify.app/workout-tracker](https://main--fyle-health-challenge-tracker.netlify.app/workout-tracker)
+
+Feel free to explore its features and provide feedback!
+
+### Deployment Instructions
+
+This application is hosted on Netlify.  Here are the basic steps to deploy your own Angular project to Netlify:
+
+1. Build your project using `ng build --configuration production`.
+2. Create a Netlify account (if you don't already have one).
+3. Link your GitHub repository to Netlify.
+4. Configure the build command and publish directory in Netlify settings.
+5. Deploy! 
+
+For more detailed instructions, refer to Netlify's documentation.
 
