@@ -1,9 +1,6 @@
-# HealthChallengeTracker
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.1.
-
 # Health Challenge Tracker
 
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.1.
 [![Code Coverage Badge (replace with actual link)]](https://img.shields.io/badge/Code%20Coverage-100%25-brightgreen)
 
 A single-page Angular (v14+) application for tracking and visualizing your fitness challenges.
@@ -53,7 +50,7 @@ This application addresses the challenge of tracking personal fitness goals and 
 
 2.  **Clone the Repository:**
     ```bash
-    git clone <your-repository-url>
+    git clone https://github.com/apoorv-deep/health-challenge-tracker.git
     ```
 
 3.  **Install Dependencies:**
