@@ -95,7 +95,7 @@ After running this command you will find a folder names coverage in the project 
 
 You can experience the Health Challenge Tracker in action:
 
-- **Live Demo:** [https://main--fyle-health-challenge-tracker.netlify.app/workout-tracker](https://main--fyle-health-challenge-tracker.netlify.app)
+- **Live Demo:** [https://fyle-health-challenge-tracker.netlify.app/workout-tracker](https://main--fyle-health-challenge-tracker.netlify.app)
 
 Feel free to explore its features and provide feedback!
 
